@@ -1,0 +1,32 @@
+.pickle-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.pickle-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.pickle-item:hover {
+    transform: scale(1.05);
+}
+
+.pickle-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.pickle-description {
+    font-size: 1em;
+    color: #555;
+}

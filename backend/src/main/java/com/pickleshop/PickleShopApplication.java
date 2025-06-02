@@ -1,0 +1,12 @@
+package com.pickleshop;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PickleShopApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(PickleShopApplication.class, args);
+    }
+}
