@@ -1,0 +1,13 @@
+<div class="shop-container">
+  <div class="product-banner" *ngFor="let product of products" (click)="goToProduct(product.id)">
+    <img [src]="product.imageUrl" [alt]="product.name" class="product-img" />
+    <div class="product-info">
+      <div class="product-name">{{ product.name }}</div>
+      <div class="product-short">{{ product.description }}</div>
+      <div class="product-meta">
+        <span class="product-weight">{{ product.weight }}</span>
+        <span class="product-price">₹{{ product.price }}</span>
+      </div>
+    </div>
+  </div>
+</div>

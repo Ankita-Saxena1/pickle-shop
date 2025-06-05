@@ -1,9 +1,9 @@
 package com.pickleshop.repository;
 
-import com.pickleshop.model.Pickle;
+import com.pickleshop.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PickleRepository extends JpaRepository<Pickle, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }

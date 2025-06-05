@@ -1,7 +1,7 @@
 package com.pickleshop.controller;
 
-import com.pickleshop.model.Pickle;
-import com.pickleshop.repository.PickleRepository;
+import com.pickleshop.model.Product;
+import com.pickleshop.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,29 +14,29 @@ import java.util.Optional;
 public class PickleController {
 
     @Autowired
-    private PickleRepository pickleRepository;
+    private ProductRepository pickleRepository;
 
     @GetMapping
-    public List<Pickle> getAllPickles() {
+    public List<Product> getAllPickles() {
         return pickleRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pickle> getPickleById(@PathVariable Long id) {
-        Optional<Pickle> pickle = pickleRepository.findById(id);
+    public ResponseEntity<Product> getPickleById(@PathVariable Long id) {
+        Optional<Product> pickle = pickleRepository.findById(id);
         return pickle.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public Pickle createPickle(@RequestBody Pickle pickle) {
+    public Product createPickle(@RequestBody Product pickle) {
         return pickleRepository.save(pickle);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Pickle> updatePickle(@PathVariable Long id, @RequestBody Pickle pickleDetails) {
-        Optional<Pickle> optionalPickle = pickleRepository.findById(id);
+    public ResponseEntity<Product> updatePickle(@PathVariable Long id, @RequestBody Product pickleDetails) {
+        Optional<Product> optionalPickle = pickleRepository.findById(id);
         if (optionalPickle.isPresent()) {
-            Pickle pickle = optionalPickle.get();
+            Product pickle = optionalPickle.get();
             pickle.setName(pickleDetails.getName());
             pickle.setDescription(pickleDetails.getDescription());
             return ResponseEntity.ok(pickleRepository.save(pickle));
