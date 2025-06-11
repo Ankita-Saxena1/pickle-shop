@@ -1,2 +1,46 @@
-frontend/node_modules
-# Ignore node_modules in the frontend directory
+# Node modules and build output
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+
+# Mac system files
+frontend/.DS_Store
+.DS_Store
+
+# Angular environment files
+frontend/src/environments/*.ts
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# IDE files
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+.vscode/
+
+# Java build output
+backend/target/
+
+# Maven
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# OS generated files
+Thumbs.db
+
+# Ignore backend logs
+backend/*.log
+
+# Ignore compiled class files
+*.class
+
+# Ignore test reports
+backend/surefire-reports/
+
+# Ignore environment files
+.env

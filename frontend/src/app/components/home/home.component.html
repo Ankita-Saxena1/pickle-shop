@@ -1,37 +1,35 @@
-    <div class="main-container">
+<div class="main-container">
   <header>
-        <img src="assets/images/logo.png" alt="Engineer's Farm Logo" class="logo-img">
+    <img src="assets/images/logo.jpg" alt="Engineer's Farm Logo" class="logo-img">
     <nav>
       <a href="#">Home</a>
       <a routerLink="/shop">Shop</a>
       <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a routerLink="/contact">Contact</a>
     </nav>
   </header>
   <section class="banner">
-    <span class="accent">Let’s shop our</span>
+    <span class="accent">Let's shop our</span>
     <span class="headline">NEWEST ARRIVALS</span>
     <span class="sub">Homemade pickles, delivered fresh to your door</span>
     <br>
     <button class="shop-btn">Shop Now</button>
   </section>
-  <!-- Add this after the closing </section> of your main banner -->
-<section class="category-banners">
-  <div class="category-banner best-sellers">
-    <span class="category-title">BEST SELLERS</span>
-  </div>
-  <div class="category-banner our-pickles">
-  <a routerLink="/product">
-    <span class="category-title">OUR PICKLES</span>
-  </a>
+  <section class="category-banners">
+    <div class="category-banner">
+      <img src="assets/images/bestseller.jpg" alt="Best Sellers" class="category-img">
+    </div>
+    <div class="category-banner">
+      <a routerLink="/shop">
+        <img src="assets/images/ourpickles.jpg" alt="Our Pickles" class="category-img">
+      </a>
+    </div>
+    <div class="category-banner">
+      <img src="assets/images/sale-items.jpg" alt="Sale Items" class="category-img">
+    </div>
+    <div class="category-banner">
+      <img src="assets/images/upcoming-items.jpg" alt="Upcoming Items" class="category-img">
+    </div>
+  </section>
 </div>
-  <div class="category-banner sale-items">
-    <span class="category-title">SALE ITEMS</span>
-  </div>
-  <div class="category-banner upcoming-items">
-    <span class="category-title">UPCOMING ITEMS</span>
-  </div>
-</section>
-  </div>
-  <!-- At the end of app.component.html -->
 <router-outlet></router-outlet>

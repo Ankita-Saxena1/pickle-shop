@@ -1,12 +1,23 @@
-<div class="shop-container">
-  <div class="product-banner" *ngFor="let product of products" (click)="goToProduct(product.id)">
-    <img [src]="product.imageUrl" [alt]="product.name" class="product-img" />
-    <div class="product-info">
-      <div class="product-name">{{ product.name }}</div>
-      <div class="product-short">{{ product.description }}</div>
-      <div class="product-meta">
-        <span class="product-weight">{{ product.weight }}</span>
-        <span class="product-price">₹{{ product.price }}</span>
+<div class="main-container">
+  <header>
+    <img src="assets/images/logo.jpg" alt="Engineer's Farm Logo" class="logo-img">
+    <nav>
+      <a routerLink="/">Home</a>
+      <a routerLink="/">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <div class="shop-container">
+    <div class="product-banner" *ngFor="let product of products" (click)="goToProduct(product.id)">
+      <img [src]="product.imageUrl" [alt]="product.name" class="product-img" />
+      <div class="product-info">
+        <div class="product-name">{{ product.name }}</div>
+        <div class="product-short">{{ product.description }}</div>
+        <div class="product-meta">
+          <span class="product-weight">{{ product.weight }}</span>
+          <span class="product-price">₹{{ product.price }}</span>
+        </div>
       </div>
     </div>
   </div>
