@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 interface Product {
   id: number;
@@ -13,6 +16,8 @@ interface Product {
 
 @Component({
   selector: 'app-shop',
+  standalone: true,
+  imports: [CommonModule, HttpClientModule, RouterModule],
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css']
 })
