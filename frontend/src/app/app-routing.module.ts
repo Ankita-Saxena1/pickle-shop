@@ -1,4 +1,3 @@
-// filepath: /Users/ankitasaxena/code-workspace/pickle-shop/frontend/src/app/app-routing.module.ts
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ShopComponent } from './components/shop/shop.component';
