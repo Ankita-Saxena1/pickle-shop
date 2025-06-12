@@ -5,6 +5,7 @@ frontend/.angular/cache/
 
 # Mac system files
 frontend/.DS_Store
+backend/.DS_Store
 .DS_Store
 
 # Angular environment files
@@ -14,6 +15,10 @@ frontend/src/environments/*.ts
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+*.log
 
 # IDE files
 .idea/
@@ -44,3 +49,4 @@ backend/surefire-reports/
 
 # Ignore environment files
 .env
+*.env
