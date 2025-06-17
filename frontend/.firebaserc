@@ -1,6 +1,7 @@
 {
   "projects": {
-    "dev": "pickle-shop-project"
+    "dev": "pickle-shop-project",
+    "default": "pickle-shop-project"
   },
   "targets": {},
   "etags": {}
